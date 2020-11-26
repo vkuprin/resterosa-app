@@ -5,8 +5,7 @@ import { PersistGate } from 'redux-persist/lib/integration/react'
 import { store, persistor } from '@/Store'
 import { SafeAreaView, StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import { ApplicationNavigator } from '@/Navigators'
-import { navigationRef } from '@/Navigators/Root'
+import Router from '@/Router'
 import { Layout } from '@/Theme'
 import './Translations'
 
@@ -21,9 +20,9 @@ const App = () => (
      */}
     <PersistGate loading={null} persistor={persistor}>
       <SafeAreaView style={Layout.fill}>
-        <NavigationContainer ref={navigationRef}>
+        <NavigationContainer>
           <StatusBar barStyle="dark-content" />
-          <ApplicationNavigator />
+          <Router />
         </NavigationContainer>
       </SafeAreaView>
     </PersistGate>

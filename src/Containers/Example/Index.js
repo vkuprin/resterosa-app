@@ -26,38 +26,38 @@ const IndexExampleContainer = () => {
   }
 
   return (
-    <View style={[Layout.fill, Layout.colCenter, Gutters.smallHPadding]}>
+    <View style={[Layout.fill, Gutters.smallHPadding, {backgroundColor: 'white'}]}>
       <View style={[[Layout.colCenter, Gutters.smallHPadding]]}>
-        <Brand />
-        {fetchOneUserLoading && <ActivityIndicator />}
-        {fetchOneUserError ? (
-          <Text>{fetchOneUserError.message}</Text>
-        ) : (
-          <Text>{t('example.helloUser', { name: user.name })}</Text>
-        )}
+        <Brand height={300} width={300}/>
+        {/*{fetchOneUserLoading && <ActivityIndicator />}*/}
+        {/*{fetchOneUserError ? (*/}
+        {/*  <Text>{fetchOneUserError.message}</Text>*/}
+        {/*) : (*/}
+        {/*  <Text>{t('example.helloUser', { name: user.name })}</Text>*/}
+        {/*)}*/}
       </View>
-      <View
-        style={[
-          Layout.row,
-          Layout.rowHCenter,
-          Gutters.smallHPadding,
-          Gutters.largeVMargin,
-          Common.backgroundPrimary,
-        ]}
-      >
-        <Text style={[Layout.fill, Fonts.textCenter]}>
-          {t('example.labels.userId')}
-        </Text>
-        <TextInput
-          onChangeText={(text) => fetch(text)}
-          editable={!fetchOneUserLoading}
-          keyboardType={'number-pad'}
-          maxLength={1}
-          value={userId}
-          selectTextOnFocus
-          style={[Layout.fill, Common.textInput]}
-        />
-      </View>
+      {/*<View*/}
+      {/*  style={[*/}
+      {/*    Layout.row,*/}
+      {/*    Layout.rowHCenter,*/}
+      {/*    Gutters.smallHPadding,*/}
+      {/*    Gutters.largeVMargin,*/}
+      {/*    Common.backgroundPrimary,*/}
+      {/*  ]}*/}
+      {/*>*/}
+        {/*<Text style={[Layout.fill, Fonts.textCenter]}>*/}
+        {/*  {t('example.labels.userId')}*/}
+        {/*</Text>*/}
+        {/*<TextInput*/}
+        {/*  onChangeText={(text) => fetch(text)}*/}
+        {/*  editable={!fetchOneUserLoading}*/}
+        {/*  keyboardType={'number-pad'}*/}
+        {/*  maxLength={1}*/}
+        {/*  value={userId}*/}
+        {/*  selectTextOnFocus*/}
+        {/*  style={[Layout.fill, Common.textInput]}*/}
+        {/*/>*/}
+      {/*</View>*/}
     </View>
   )
 }

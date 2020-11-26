@@ -1,13 +1,15 @@
 {
   "name": "app",
-  "version": "2.1.4",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clear:cache": "rm -rf $TMPDIR/metro-bundler-cache-*",
+    "clear:node": "rm -rf node_modules"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.13.2",
@@ -24,9 +26,12 @@
     "react-native": "0.63.3",
     "react-native-flipper": "^0.64.0",
     "react-native-gesture-handler": "^1.8.0",
+    "react-native-paper": "^4.4.1",
     "react-native-reanimated": "^1.13.0",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.14.0",
+    "react-native-status-bar-height": "^2.6.0",
+    "react-native-vector-icons": "^7.1.0",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
     "redux-flipper": "^1.4.2",
