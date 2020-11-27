@@ -1,4 +1,4 @@
-export const emailValidator = (email) => {
+const emailValidator = (email) => {
   const re = /\S+@\S+\.\S+/
 
   if (!email || email.length <= 0) {
@@ -11,7 +11,7 @@ export const emailValidator = (email) => {
   return ''
 }
 
-export const passwordValidator = (password) => {
+const passwordValidator = (password) => {
   if (!password || password.length <= 0) {
     return 'Password cannot be empty.'
   }
@@ -19,10 +19,12 @@ export const passwordValidator = (password) => {
   return ''
 }
 
-export const nameValidator = (name) => {
+const nameValidator = (name) => {
   if (!name || name.length <= 0) {
     return 'Name cannot be empty.'
   }
 
   return ''
 }
+
+export default { emailValidator, nameValidator, passwordValidator }

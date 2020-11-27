@@ -1,19 +1,20 @@
 import React, { memo, useState } from 'react'
 import { Text, StyleSheet, TouchableOpacity } from 'react-native'
-import { emailValidator } from '@/Core/utils'
-import Background from '../Background'
-import BackButton from '../BackButton'
-import Logo from '../Logo'
-import Header from '../Header'
-import TextInput from '../TextInput'
-import { theme } from '@/Core/theme'
-import Button from '../Button'
+import { theme, utils } from '@/Core'
+import {
+  BackButton,
+  Background,
+  Button,
+  TextInput,
+  Header,
+  Logo,
+} from '@/Components'
 
 const ForgotPasswordScreen = ({ navigation }) => {
   const [email, setEmail] = useState({ value: '', error: '' })
 
   const _onSendPressed = () => {
-    const emailError = emailValidator(email.value)
+    const emailError = utils.emailValidator(email.value)
 
     if (emailError) {
       setEmail({ ...email, error: emailError })

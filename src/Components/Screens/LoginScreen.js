@@ -1,21 +1,22 @@
 import React, { memo, useState } from 'react'
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native'
-import Background from '../Background'
-import Logo from '../Logo'
-import Header from '../Header'
-import Button from '../Button'
-import TextInput from '../TextInput'
-import BackButton from '../BackButton'
-import { theme } from '@/Core/theme'
-import { emailValidator, passwordValidator } from '@/Core/utils'
+import {
+  Background,
+  Logo,
+  Header,
+  Button,
+  TextInput,
+  BackButton,
+} from '@/Components'
+import { theme, utils } from '@/Core'
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
 
   const _onLoginPressed = () => {
-    const emailError = emailValidator(email.value)
-    const passwordError = passwordValidator(password.value)
+    const emailError = utils.emailValidator(email.value)
+    const passwordError = utils.passwordValidator(password.value)
 
     if (emailError || passwordError) {
       setEmail({ ...email, error: emailError })
@@ -32,7 +33,7 @@ const LoginScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>Welcome back.</Header>
+      <Header>ResteRosa</Header>
 
       <TextInput
         label="Email"

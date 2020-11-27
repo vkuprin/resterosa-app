@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import {
   HomeScreen,
@@ -9,16 +8,46 @@ import {
   Dashboard,
 } from '../Components/Screens'
 
-const Root = createStackNavigator()
+export const Root = createStackNavigator()
 
-const Router = () => {
-  return (
-    <Root.Navigator>
-      <Root.Screen name="Screen1" component={HomeScreen} />
-      <Root.Screen name="Screen2" component={LoginScreen} />
-      <Root.Screen name="Screen3" component={Dashboard} />
-    </Root.Navigator>
-  )
-}
+const Router = () => (
+  <Root.Navigator>
+    <Root.Screen
+      name="HomeScreen"
+      component={HomeScreen}
+      options={{ headerShown: false }}
+    />
+    <Root.Screen
+      name="LoginScreen"
+      component={LoginScreen}
+      options={{ headerShown: false }}
+    />
+    <Root.Screen
+      name="RegisterScreen"
+      component={RegisterScreen}
+      options={{ headerShown: false }}
+    />
+    <Root.Screen
+      name="ForgotPasswordScreen"
+      component={ForgotPasswordScreen}
+      options={{ headerShown: false }}
+    />
+    <Root.Screen
+      name="Dashboard"
+      component={Dashboard}
+      options={{
+        headerTitle: 'ResteRosa',
+        headerStyle: {
+          backgroundColor: '#034748',
+        },
+        headerLeft: null,
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+      }}
+    />
+  </Root.Navigator>
+)
 
 export default Router

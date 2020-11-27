@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { StyleSheet } from 'react-native'
 import { Button as PaperButton } from 'react-native-paper'
-import { theme } from '@/Core/theme'
+import { theme } from '@/Core'
 
 const Button = ({ mode, style, children, ...props }) => (
   <PaperButton
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     marginVertical: 10,
+    backgroundColor: '#202311',
   },
   text: {
     fontWeight: 'bold',

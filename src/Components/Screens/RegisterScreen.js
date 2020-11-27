@@ -1,13 +1,14 @@
 import React, { memo, useState } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import Background from '../Background'
-import Logo from '../Logo'
-import Header from '../Header'
-import Button from '../Button'
-import TextInput from '../TextInput'
-import BackButton from '../BackButton'
-import { theme } from '@/Core/theme'
-import { emailValidator, passwordValidator, nameValidator } from '@/Core/utils'
+import {
+  Background,
+  Logo,
+  Header,
+  Button,
+  BackButton,
+  TextInput,
+} from '@/Components'
+import { theme, utils } from '@/Core'
 
 const RegisterScreen = ({ navigation }) => {
   const [name, setName] = useState({ value: '', error: '' })
@@ -15,10 +16,9 @@ const RegisterScreen = ({ navigation }) => {
   const [password, setPassword] = useState({ value: '', error: '' })
 
   const _onSignUpPressed = () => {
-    const nameError = nameValidator(name.value)
-    const emailError = emailValidator(email.value)
-    const passwordError = passwordValidator(password.value)
-
+    const nameError = utils.nameValidator(name.value)
+    const emailError = utils.emailValidator(email.value)
+    const passwordError = utils.passwordValidator(password.value)
     if (emailError || passwordError || nameError) {
       setName({ ...name, error: nameError })
       setEmail({ ...email, error: emailError })
