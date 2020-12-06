@@ -26,9 +26,11 @@ const IndexExampleContainer = () => {
   }
 
   return (
-    <View style={[Layout.fill, Gutters.smallHPadding, {backgroundColor: 'white'}]}>
+    <View
+      style={[Layout.fill, Gutters.smallHPadding, { backgroundColor: 'white' }]}
+    >
       <View style={[[Layout.colCenter, Gutters.smallHPadding]]}>
-        <Brand height={300} width={300}/>
+        <Brand height={300} width={300} />
         {/*{fetchOneUserLoading && <ActivityIndicator />}*/}
         {/*{fetchOneUserError ? (*/}
         {/*  <Text>{fetchOneUserError.message}</Text>*/}
@@ -45,18 +47,18 @@ const IndexExampleContainer = () => {
       {/*    Common.backgroundPrimary,*/}
       {/*  ]}*/}
       {/*>*/}
-        {/*<Text style={[Layout.fill, Fonts.textCenter]}>*/}
-        {/*  {t('example.labels.userId')}*/}
-        {/*</Text>*/}
-        {/*<TextInput*/}
-        {/*  onChangeText={(text) => fetch(text)}*/}
-        {/*  editable={!fetchOneUserLoading}*/}
-        {/*  keyboardType={'number-pad'}*/}
-        {/*  maxLength={1}*/}
-        {/*  value={userId}*/}
-        {/*  selectTextOnFocus*/}
-        {/*  style={[Layout.fill, Common.textInput]}*/}
-        {/*/>*/}
+      {/*<Text style={[Layout.fill, Fonts.textCenter]}>*/}
+      {/*  {t('example.labels.userId')}*/}
+      {/*</Text>*/}
+      {/*<TextInput*/}
+      {/*  onChangeText={(text) => fetch(text)}*/}
+      {/*  editable={!fetchOneUserLoading}*/}
+      {/*  keyboardType={'number-pad'}*/}
+      {/*  maxLength={1}*/}
+      {/*  value={userId}*/}
+      {/*  selectTextOnFocus*/}
+      {/*  style={[Layout.fill, Common.textInput]}*/}
+      {/*/>*/}
       {/*</View>*/}
     </View>
   )

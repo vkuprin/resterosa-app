@@ -3,7 +3,6 @@ import { Background, Logo, Header, Button, Paragraph } from '@/Components'
 
 const HomeScreen = ({ navigation }) => (
   <Background>
-    <Logo />
     <Header>ResteRosa</Header>
     <Paragraph>The easiest way to find a meeting</Paragraph>
     <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>

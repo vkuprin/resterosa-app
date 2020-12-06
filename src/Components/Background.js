@@ -1,37 +1,34 @@
 import React, { memo } from 'react'
 import {
-  View,
-  ImageBackground,
   StyleSheet,
   KeyboardAvoidingView,
+  SafeAreaView,
 } from 'react-native'
+import BackImage from '../Assets/Svg/background.svg'
 
 const Background = ({ children }) => (
-  // <ImageBackground
-  //   source={require('../Assets/Images/background_dot.png')}
-  //   resizeMode="repeat"
-  //   style={styles.background}
-  // >
-  <View style={styles.background}>
+  <SafeAreaView style={styles.background}>
+    <BackImage style={styles.backImage} />
     <KeyboardAvoidingView style={styles.container} behavior="padding">
       {children}
     </KeyboardAvoidingView>
-  </View>
-  // </ImageBackground>
+  </SafeAreaView>
 )
 
 const styles = StyleSheet.create({
   background: {
     flex: 1,
     width: '100%',
-    backgroundColor: 'white',
+    height: '100%',
+  },
+  backImage: {
+    zIndex: 0,
+    position: 'absolute',
   },
   container: {
     flex: 1,
-    padding: 20,
     width: '100%',
-    maxWidth: 340,
-    backgroundColor: 'white',
+    maxWidth: 240,
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
