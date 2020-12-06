@@ -3,6 +3,11 @@ import { StyleSheet, KeyboardAvoidingView, SafeAreaView } from 'react-native'
 import Layout from '@/Theme/Layout'
 import BackImage from '../Assets/Svg/background.svg'
 import { screenHeight, screenWidth } from '@/Theme/Dimensions'
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
 
 const Background = ({ children }) => (
@@ -26,8 +31,8 @@ const styles = StyleSheet.create({
         height: screenHeight,
       },
       {
-        height: '100%',
-        width: '100%',
+        width: responsiveWidth(101),
+        height: responsiveHeight(131),
       },
     ),
     zIndex: 0,

@@ -1,8 +1,8 @@
 import { Dimensions } from 'react-native'
 
-const getWindow = Dimensions.get('window')
+const { width, height } = Dimensions.get('window')
 
-const screenWidth = Math.round(getWindow.width)
-const screenHeight = Math.round(getWindow.height)
+const screenWidth = Math.round(width)
+const screenHeight = Math.round(height)
 
 export { screenHeight, screenWidth }
