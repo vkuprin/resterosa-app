@@ -6,7 +6,6 @@ import { screenHeight, screenWidth } from '@/Theme/Dimensions'
 import {
   responsiveHeight,
   responsiveWidth,
-  responsiveFontSize,
 } from 'react-native-responsive-dimensions'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
 
@@ -24,20 +23,6 @@ const styles = StyleSheet.create({
     flex: 1,
     ...Layout.fullSize,
   },
-  backImage: {
-    ...ifIphoneX(
-      {
-        width: screenWidth,
-        height: screenHeight,
-      },
-      {
-        width: responsiveWidth(101),
-        height: responsiveHeight(131),
-      },
-    ),
-    zIndex: 0,
-    position: 'absolute',
-  },
   container: {
     flex: 1,
     width: '100%',
@@ -45,6 +30,20 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  backImage: {
+    zIndex: 0,
+    position: 'absolute',
+    ...ifIphoneX(
+      {
+        width: screenWidth,
+        height: screenHeight,
+      },
+      {
+        width: responsiveWidth(101), // + 1 Because of SVG wrapper,
+        height: responsiveHeight(131), // + 1 Because of SVG wrapper,
+      },
+    ),
   },
 })
 
