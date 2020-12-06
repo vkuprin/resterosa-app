@@ -1,10 +1,9 @@
 import React, { memo } from 'react'
-import {
-  StyleSheet,
-  KeyboardAvoidingView,
-  SafeAreaView,
-} from 'react-native'
+import { StyleSheet, KeyboardAvoidingView, SafeAreaView } from 'react-native'
+import Layout from '@/Theme/Layout'
 import BackImage from '../Assets/Svg/background.svg'
+import { screenHeight, screenWidth } from '@/Theme/Dimensions'
+import { ifIphoneX } from 'react-native-iphone-x-helper'
 
 const Background = ({ children }) => (
   <SafeAreaView style={styles.background}>
@@ -18,10 +17,19 @@ const Background = ({ children }) => (
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    width: '100%',
-    height: '100%',
+    ...Layout.fullSize,
   },
   backImage: {
+    ...ifIphoneX(
+      {
+        width: screenWidth,
+        height: screenHeight,
+      },
+      {
+        height: '100%',
+        width: '100%',
+      },
+    ),
     zIndex: 0,
     position: 'absolute',
   },

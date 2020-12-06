@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native'
+import { screenHeight } from '@/Theme/Dimensions'
+import { ifIphoneX } from 'react-native-iphone-x-helper'
 
 export default StyleSheet.create({
   /* Column Layouts */
@@ -77,7 +79,15 @@ export default StyleSheet.create({
   },
   /* Sizes Layouts */
   fill: {
-    flex: 1,
+    // flex: 1,
+    ...ifIphoneX(
+      {
+        height: screenHeight + 35,
+      },
+      {
+        height: screenHeight,
+      },
+    ),
   },
   fullSize: {
     height: '100%',
