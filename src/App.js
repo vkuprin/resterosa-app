@@ -2,12 +2,12 @@ import 'react-native-gesture-handler'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/lib/integration/react'
-import { store, persistor } from '@/Store'
+import { store, persistor } from '@/store'
 import { SafeAreaView, StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import Router from '@/Router'
-import { Layout } from '@/Theme'
-import './Translations'
+import Router from '@/router'
+import { Layout } from '@/theme'
+import './translations'
 
 const App = () => (
   <Provider store={store}>
