@@ -4,15 +4,15 @@ import { Background, Logo, Header, Button, Paragraph } from '@/components'
 const HomeScreen = ({ navigation }) => (
   <Background>
     <Header>ResteRosa</Header>
-    <Paragraph>The easiest way to find a meeting</Paragraph>
-    <Button mode="contained" onPress={() => navigation.navigate('LoginScreen')}>
-      Login
-    </Button>
     <Button
-      mode="outlined"
+      mode="contained"
       onPress={() => navigation.navigate('RegisterScreen')}
     >
-      Sign Up
+      Hello I’m ...
+    </Button>
+    {/*<Paragraph>Already have an account?</Paragraph>*/}
+    <Button mode="outlined" onPress={() => navigation.navigate('LoginScreen')}>
+      Sign in
     </Button>
   </Background>
 )

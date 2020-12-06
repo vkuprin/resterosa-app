@@ -12,8 +12,8 @@ import {
 } from 'redux-persist'
 import { configureStore } from '@reduxjs/toolkit'
 
-import startup from './Startup'
-import user from './User'
+import startup from './startup'
+import user from './user'
 
 const reducers = combineReducers({
   startup,

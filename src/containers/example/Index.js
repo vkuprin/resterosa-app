@@ -4,7 +4,7 @@ import { View, ActivityIndicator, Text, TextInput } from 'react-native'
 
 import { Brand } from '@/components'
 import { Common, Fonts, Gutters, Layout } from '@/theme'
-import FetchOne from '@/store/User/FetchOne'
+import FetchOne from '@/store/user/FetchOne'
 import { useTranslation } from 'react-i18next'
 
 const IndexExampleContainer = () => {

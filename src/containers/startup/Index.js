@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { ActivityIndicator, View, Text } from 'react-native'
 import { Layout, Fonts, Gutters } from '@/theme'
 import { useDispatch } from 'react-redux'
-import InitStartup from '@/store/Startup/Init'
+import InitStartup from '@/store/startup/Init'
 import { useTranslation } from 'react-i18next'
 import { Brand } from '@/components'
 

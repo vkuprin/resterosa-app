@@ -31,7 +31,7 @@ const LoginScreen = ({ navigation }) => {
     <Background>
       <BackButton goBack={() => navigation.navigate('HomeScreen')} />
 
-      <Logo />
+      {/*<Logo />*/}
 
       <Header>ResteRosa</Header>
 

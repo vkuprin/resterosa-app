@@ -3,7 +3,7 @@ import {
   buildAsyncActions,
   buildAsyncReducers,
 } from '@thecodingmachine/redux-toolkit-wrapper'
-import FetchOne from '@/store/User/FetchOne'
+import FetchOne from '@/store/user/FetchOne'
 // import { navigateAndSimpleReset } from '@/Navigators/Root'
 
 export default {

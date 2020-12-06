@@ -7,6 +7,7 @@ import {
   Button,
   BackButton,
   TextInput,
+  Paragraph,
 } from '@/components'
 import { theme, utils } from '@/core'
 
@@ -33,9 +34,9 @@ const RegisterScreen = ({ navigation }) => {
     <Background>
       <BackButton goBack={() => navigation.navigate('HomeScreen')} />
 
-      <Logo />
+      {/*<Logo />*/}
 
-      <Header>Create Account</Header>
+      <Paragraph>Before we start Tell us something about yourself </Paragraph>
 
       <TextInput
         label="Name"

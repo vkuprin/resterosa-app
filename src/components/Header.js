@@ -6,6 +6,7 @@ const Header = ({ children }) => <Text style={styles.header}>{children}</Text>
 
 const styles = StyleSheet.create({
   header: {
+    fontFamily: 'MajorMonoDisplay-Regular',
     fontSize: 26,
     color: theme.colors.primary,
     fontWeight: 'bold',

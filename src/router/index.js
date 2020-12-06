@@ -6,7 +6,7 @@ import {
   RegisterScreen,
   ForgotPasswordScreen,
   Dashboard,
-} from '../components/Screens'
+} from '../components/screens'
 
 export const Root = createStackNavigator()
 

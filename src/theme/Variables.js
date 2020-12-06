@@ -10,7 +10,7 @@
  */
 export const Colors = {
   transparent: 'rgba(0,0,0,0)',
-  // Example colors:
+  // example colors:
   white: '#ffffff',
   text: '#212529',
   primary: '#E14032',
